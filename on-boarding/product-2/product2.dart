@@ -10,8 +10,9 @@ void main() {
     "view all": man.viewALL,
     "edit": man.editProduct
   };
-	var commandList = "Available commands:\nadd: for adding a product\nedit: for editing a product\nview: for viewing a product\nview all: for viewing all products\ndelete: for deleting a product";
+	var commandList = "Available commands:\nadd: for adding a product\nedit: for editing a product\nview: for viewing a product\nview all: for viewing all products\ndelete: for deleting a product\nexit: exits the program";
 
+	print("==================\n$commandList\n==================");
   while (prompt != "exit") {
     stdout.write('>> ');
     prompt = stdin.readLineSync() ?? "";
