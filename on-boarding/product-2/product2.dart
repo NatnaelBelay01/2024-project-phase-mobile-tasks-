@@ -10,14 +10,15 @@ void main() {
     "view all": man.viewALL,
     "edit": man.editProduct
   };
-	print("Available commands:\nadd: for adding a product\nedit: for editing a product\nview: for viewing a product\nview all: for viewing all products\ndelete: for deleting a product");
-
+	var commandList = "Available commands:\nadd: for adding a product\nedit: for editing a product\nview: for viewing a product\nview all: for viewing all products\ndelete: for deleting a product";
 
   while (prompt != "exit") {
     stdout.write('>> ');
     prompt = stdin.readLineSync() ?? "";
     if (prompts.containsKey(prompt)) {
       prompts[prompt]?.call();
+		} else if(prompt == "help"){
+			print(commandList);
     } else if (prompt != "exit") {
       print("Unknown Command");
     }
